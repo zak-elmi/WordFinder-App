@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% from "_formhelpers.html" import render_field %}
+{% block content %}
+<html>
+<head>
+<script src="static/index.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <form action="/words" onsubmit= "return validEntry()" method="post">
+        {{ form.hidden_tag() }}
+
+       
+        {{ render_field(form.avail_letters) }}
+        <br />
+
+ <div>
+       
+       Pattern {{form.pattern()}}
+    </div>
+    <div>
+        Word Length{{form.word_size()}}
+    </div>
+    <div>
+        <span id="message" class = "hidden"> </span>
+    </div>
+        <div>
+        {{form.submit()}}
+    </div>
+    </form>
+</body>
+{% endblock %}
+
+</html>
