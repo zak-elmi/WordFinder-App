@@ -1,8 +1,7 @@
 <html>
     <head>
-        <title>Word Finder Zak Elmi</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        
+     <link rel="stylesheet" href="/static/style.css">
+<title> WordList-ZakElmi</title>
     </head>
     <body>
         {% block navbar %}
@@ -13,6 +12,13 @@
 
         {% block content %}
         default content
+        {% endblock %}
+
+        {% block footer %}
+        <div class = "footer">
+        The source code for the Wordlist papplication can be found <a href = "https://github.com/zak-elmi/WordFinder-App">here</a>
+         </div>
+
         {% endblock %}
     </body>
 </html>

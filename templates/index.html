@@ -4,11 +4,11 @@
 <html>
 <head>
 <script src="static/index.js"></script>
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <form action="/words" onsubmit= "return validEntry()" method="post">
-        {{ form.hidden_tag() }}
+    <form action="/words" onsubmit= "validEntry()" method="post">
+       
 
        
         {{ render_field(form.avail_letters) }}
@@ -27,8 +27,8 @@
         <div>
         {{form.submit()}}
     </div>
+    {{ form.hidden_tag() }}
     </form>
 </body>
 {% endblock %}
-
 </html>
